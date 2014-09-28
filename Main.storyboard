@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKf-AN-amq">
@@ -304,7 +304,6 @@
                                 </variation>
                                 <connections>
                                     <action selector="startDayButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1yQ-UK-fN8"/>
-                                    <segue destination="8gW-Ww-czk" kind="presentation" modalTransitionStyle="flipHorizontal" id="ZTf-zm-ASp"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do your customers prefer more sugar or more lemons today?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vLR-uB-898">
@@ -398,12 +397,13 @@
         <!--Todays Results View Controller-->
         <scene sceneID="XsR-8f-2XS">
             <objects>
-                <viewController id="8gW-Ww-czk" customClass="TodaysResultsViewController" customModule="Lemonade_Stand" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TodaysResultsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8gW-Ww-czk" customClass="TodaysResultsViewController" customModule="Lemonade_Stand" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UtB-oa-B2Y"/>
                         <viewControllerLayoutGuide type="bottom" id="rgr-Kz-8aG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5j3-ZE-QcB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cold" translatesAutoresizingMaskIntoConstraints="NO" id="1ow-Y3-hkv">
@@ -430,7 +430,7 @@
                                     <rect key="frame" x="267" y="240" width="39" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B. Glasses Per Customer:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MR0-hF-TKx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B. Total Glasses Sold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MR0-hF-TKx">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -466,7 +466,7 @@
                                     <rect key="frame" x="267" y="320" width="39" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D. Total Sales (A x B x C):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLS-em-6Rh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D. Total Sales (B x C):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLS-em-6Rh">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -576,8 +576,8 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="glassesSoldLabel" destination="Zee-5l-YkC" id="zM1-HC-Em9"/>
                         <outlet property="numCustomersLabel" destination="sc4-5V-SEG" id="39z-Qw-TC4"/>
-                        <outlet property="numGlassPerCustomerLabel" destination="Zee-5l-YkC" id="ND2-wm-Yk8"/>
                         <outlet property="pricePerGlassLabel" destination="Cy4-mn-0n2" id="Uf0-rz-HYa"/>
                         <outlet property="totalCostLabel" destination="4VL-Gz-Px1" id="e34-5u-Ims"/>
                         <outlet property="totalProfitLabel" destination="wg8-9o-3ux" id="HWg-xW-8Br"/>
